@@ -3,4 +3,4 @@
 
 (describe "That I can run Speclj examples on Shippable"
   (it "equals"
-    (should= 0 0)))
+    (should= 0 1)))
