@@ -5,10 +5,9 @@ lein:
 
 before_script:
     - mkdir -p shippable/testresults
-    - mkdir -p shippable/codecoverage
 
 script:
-    - lein test2junit
+    - lein spec -f junit > shippable/testresults/junit.xml
 
 branches:
     only:

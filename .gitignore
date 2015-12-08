@@ -15,3 +15,4 @@ figwheel_server.log
 .tm_properties
 .DS_Store
 resources/public/index.html
+/shippable/*

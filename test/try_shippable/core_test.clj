@@ -1,6 +1,6 @@
 (ns try-shippable.core-test
-  (:use clojure.test))
+  (:use speclj.core))
 
-(deftest a-test
-  (testing "That I can run tests on Shippable"
-    (is (= 0 0))))
+(describe "That I can run Speclj examples on Shippable"
+  (it "equals"
+    (should= 0 0)))
