@@ -6,5 +6,5 @@
     (should= 0 0))
 
   ; (it "fails"
-  ;   (should= 0 1)
-  ))
+  ;   (should= 0 1))
+  )
