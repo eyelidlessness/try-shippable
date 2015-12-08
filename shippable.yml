@@ -4,8 +4,12 @@ lein:
     - lein2
 
 before_script:
-  - mkdir -p shippable/testresults
-  - mkdir -p shippable/codecoverage
+    - mkdir -p shippable/testresults
+    - mkdir -p shippable/codecoverage
 
 script:
-  - lein test2junit
+    - lein test2junit
+
+branches:
+    only:
+        - master
