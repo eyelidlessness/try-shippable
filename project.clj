@@ -29,11 +29,16 @@
                                         :asset-path   "/js/out"
                                         :optimizations :none
                                         :main "try-shippable.wat"}}}}
-  :profiles {:uberjar {:prep-tasks ["compile" ["cljsbuild" "once"]]
+
+  :profiles {:dev {:plugins [[test2junit "1.1.1"]]}
+
+             :uberjar {:prep-tasks ["compile" ["cljsbuild" "once"]]
                        :aot :all
                        :omit-source true
                        :cljsbuild {:jar true
                                    :builds {:app
                                              {:compiler
                                               {:optimizations :whitespace
-                                               :pretty-print false}}}}}})
+                                               :pretty-print false}}}}}}
+
+  :test2junit-output-dir "./shippable/testresults")
