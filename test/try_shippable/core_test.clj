@@ -3,4 +3,4 @@
 
 (deftest a-test
   (testing "That I can run tests on Shippable"
-    (is (= 0 0))))
+    (is (= 0 1))))
