@@ -9,6 +9,9 @@ before_script:
 script:
     - lein spec -f junit > shippable/testresults/junit.xml
 
+after_script:
+    - lein run -m clojure.main scripts/build_static.clj
+
 branches:
     only:
         - master
