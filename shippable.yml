@@ -13,7 +13,7 @@ script:
 after_script:
     - lein run -m clojure.main scripts/build_static.clj
     - cp -r ./docker ./shippable/buildoutput
-    - cp -r ./resources ./shppable/buildoutput
+    - cp -r ./resources ./shippable/buildoutput
 
 branches:
     only:
