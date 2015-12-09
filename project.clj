@@ -22,7 +22,9 @@
 
   :clean-targets ^{:protect false} [:target-path
                                     [:cljsbuild :builds :app :compiler :output-dir]
-                                    [:cljsbuild :builds :app :compiler :output-to]]
+                                    [:cljsbuild :builds :app :compiler :output-to]
+                                    "resources/public/js/built.js"
+                                    "resources/public/index.html"]
 
   :source-paths ["src"]
   :resource-paths ["resources" "target/cljsbuild"]
@@ -32,7 +34,14 @@
                                         :output-dir "target/cljsbuild/public/js/out"
                                         :asset-path   "/js/out"
                                         :optimizations :none
-                                        :main "try-shippable.wat"}}}}
+                                        :main "try-shippable.wat"}}
+                       :build {:source-paths ["src"]
+                               :compiler {:output-to "resources/public/js/built.js"
+                                          :output-dir "resources/public/js/out"
+                                          :asset-path   "/js/out"
+                                          :optimizations :whitespace
+                                          :pretty-print false
+                                          :main "try-shippable.wat"}}}}
 
   :profiles {:uberjar {:prep-tasks ["compile" ["cljsbuild" "once"]]
                        :aot :all
