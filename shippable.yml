@@ -4,6 +4,7 @@ lein:
     - lein2
 
 before_script:
+    - mkdir -p shippable/buildoutput
     - mkdir -p shippable/testresults
 
 script:
@@ -11,6 +12,8 @@ script:
 
 after_script:
     - lein run -m clojure.main scripts/build_static.clj
+    - cp -r ./docker ./shippable/buildoutput
+    - cp -r ./resources ./shppable/buildoutput
 
 branches:
     only:

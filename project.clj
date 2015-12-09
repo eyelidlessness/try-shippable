@@ -23,6 +23,7 @@
   :clean-targets ^{:protect false} [:target-path
                                     [:cljsbuild :builds :app :compiler :output-dir]
                                     [:cljsbuild :builds :app :compiler :output-to]
+                                    "resources/public/js/out"
                                     "resources/public/js/built.js"
                                     "resources/public/index.html"]
 
