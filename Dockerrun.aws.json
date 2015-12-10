@@ -6,11 +6,7 @@
     },
     "Ports": [
         {
-            "ContainerPort": "3000"
+            "ContainerPort": "80"
         }
-    ],
-    "Authentication": {
-        "Bucket": "try-shippable",
-        "Key": "<DOCKER_CONFIG>"
-    }
+    ]
 }
